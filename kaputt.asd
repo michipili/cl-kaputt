@@ -13,10 +13,19 @@
 
 (asdf:defsystem #:kaputt
   :description "A Simple Interactive Test Framework for Common Lisp"
+  :homepage "https://github.com/michipili/cl-kaputt"
   :author "Michaël Le Barbier"
   :license "MIT"
   :components
   ((:file "kaputt")))
+
+(asdf:defsystem #:kaputt/test
+  :description "A testsuite for the Kaputt Test Framework"
+  :author "Michaël Le Barbier"
+  :license "MIT"
+  :depends-on (#:kaputt #:cl-ppcre)
+  :components
+  ((:file "test")))
 
 (asdf:defsystem #:kaputt/example
   :description "An Example for the Kaputt Test Framework"
